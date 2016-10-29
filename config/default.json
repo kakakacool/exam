@@ -1,0 +1,14 @@
+{
+  "server": {
+    "host": "localhost",
+    "port": 3000
+  },
+  "mysql": {
+    "host": "localhost",
+    "db" : "vietis_exam",
+    "user": "root",
+    "password": ""
+  },
+  "secret_key" : "secretKey",
+  "pass_key" : "password"
+}

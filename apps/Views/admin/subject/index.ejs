@@ -1,0 +1,68 @@
+<%- include ../layout/header.ejs %>
+<!-- Main Content -->
+<div class="container-fluid main-content">
+    <div class="side-body">
+        <div class="main-body">
+
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Subjects Management
+
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12">
+                        <form action="#" class="form-horizontal">
+                            <div class="form-group">
+                                <label for="subjectName" class="col-sm-2">Subject name</label>
+
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control col-sm-4" id="subjectName" placeholder="Subject name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary" name="">Search</button>
+                                <a href="/admin/subject/add" class="btn btn-success pull-right">New Subject</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered customer-registration">
+                            <tr>
+                                <th><input id="select_all" type="checkbox" value=""/></th>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Created</th>
+                                <th>Updated</th>
+                                <th>Actions</th>
+                            </tr>
+                            <% if(data && data.subjects){
+                                for(var i =0; i < data.subjects.length; i++){%>
+                                <tr>
+                                    <td class="checkbox-select-item">
+                                        <input type="checkbox" value=""/>
+                                    </td>
+                                    <td><%= data.subjects[i].id %></td>
+                                    <td><%= data.subjects[i].name %></td>
+                                    <td><%= moment(data.subjects[i].created).format('YYYY-MM-DD HH:mm:ss') %></td>
+                                    <td><%= moment(data.subjects[i].updated).format('YYYY-MM-DD HH:mm:ss') %></td>
+                                    <td>
+                                        <a href="/admin/subject/edit/<%= data.subjects[i].id %>" class="btn btn-primary">Edit</a>
+                                        <a href="#" class="btn btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            <% }}%>
+                        </table>
+                    </div>
+                    <p class="pull-left">Rows: 100/1,000</p>
+                    <div class="pull-right">
+                        <button href="#" class="btn btn-primary">Extract to XLS</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include ../layout/footer.ejs %>

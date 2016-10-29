@@ -1,0 +1,41 @@
+<%- include ../layout/header.ejs %>
+<!-- Main Content -->
+<div class="container-fluid main-content">
+    <div class="side-body">
+        <div class="main-body">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Edit Subject</div>
+                <div class="panel-body">
+                    <form class="form-horizontal" method="post" action="">
+                        <input type="hidden" name="subject_id" value="<%= data.subjects.id %>">
+                        <%if(data && data.error){%>
+                        <p class="alert alert-danger">
+                            <%= data.error %>
+                            <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </p>
+                        <%}else if(data.msg){%>
+                        <p class="alert alert-success">
+                            <%= data.msg %>
+                            <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </p>
+                        <%}%>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label hidden-xs">Subject name</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" name="subject_name" value="<%= data.subjects.name %>" placeholder="Subject name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-6 pull-right">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<%- include ../layout/footer.ejs %>

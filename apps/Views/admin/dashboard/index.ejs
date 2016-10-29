@@ -1,0 +1,127 @@
+<%- include ../layout/header.ejs %>
+<!-- Main Content -->
+<div class="container-fluid main-content">
+    <div class="side-body">
+        <div class="main-body">
+
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">View customer registration
+                    <!-- <ul class="pull-right btn-option">
+                        <li><a href="#" class="close-btn glyphicon glyphicon-remove"></a></li>
+                    </ul> -->
+
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-12">
+                        <form action="#" class="form-horizontal">
+                            <div class="form-group">
+                                <label for="exampleInputName2" class="col-sm-2">Registraion date</label>
+
+                                <div class="col-sm-10">
+                                    <div class="form-inline">
+                                        <input type="text" class="form-control" id="exampleInputName2"
+                                               placeholder="yyyy-mm-dd"> ~
+                                        <input type="text" class="form-control" placeholder="yyyy-mm-dd">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName3" class="col-sm-2">Customer name</label>
+
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control col-sm-4" id="exampleInputName3"
+                                           placeholder="Jane Doe">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2">Age from</label>
+
+                                <div class="col-sm-3">
+                                    <select name="" class="form-control col-sm-4">
+                                        <option value="">30~40</option>
+                                        <option value="">50~60</option>
+                                        <option value="">30~40</option>
+                                        <option value="">50~60</option>
+                                        <option value="">30~40</option>
+                                        <option value="">50~60</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName2" class="col-sm-2">Model</label>
+
+                                <div class="col-sm-10">
+                                    <div class="form-inline">
+                                        <select type="text" class="form-control">
+                                            <option value=""> --Select one--</option>
+                                            <option value="">Model A</option>
+                                            <option value="">Model B</option>
+                                            <option value="">Model C</option>
+                                        </select> &nbsp;&nbsp;
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-default " name="">View data</button>
+                                <a href="add.html" class="btn btn-default " name="">New registration</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="clearfix"></div>
+                    <p>Customer registation data</p>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered customer-registration">
+                            <tr>
+                                <th style="width: 3%">#</th>
+                                <th style="width: 3%"><input id="select_all" type="checkbox" value=""/></th>
+                                <th style="width: 3%">HEAD</th>
+                                <th style="width: 10%">HEAD Name</th>
+                                <th style="width: 10%">Customer Type</th>
+                                <th style="width: 10%">Customer name</th>
+                                <th style="width: 8%">Registraion date</th>
+                                <th style="width: 5%">Gender</th>
+                                <th style="width: 5%">Occcuation</th>
+                                <th style="width: 15%">Addresss</th>
+                                <th style="width: 10%">Age from</th>
+                                <th style="width: 6%">MTO</th>
+                                <th>Notes</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    1
+                                </td>
+                                <td class="checkbox-select-item">
+                                    <input type="checkbox" value=""/>
+                                </td>
+                                <td>01001</td>
+                                <td>Nguyen Hung</td>
+                                <td>Hot A</td>
+                                <td>Nguyen van a</td>
+                                <td>11/07/2016</td>
+                                <td>Male</td>
+                                <td>Doctor</td>
+                                <td>No 1, Tay Ho Street, Hoan Kiem Ha noi</td>
+                                <td>30~40</td>
+                                <td>ACA100FS 0AA - NH2332</td>
+                                <td>ACA100FS 0AA - NH2332</td>
+                                <td><a href="edit.html">Edit</a></td>
+                                <!-- <td><a href="edit.html"   data-toggle="modal" data-target="#myModal">Edit</a></td> -->
+                            </tr>
+                        </table>
+                    </div>
+                    <p class="pull-left">Rows: 100/1,000</p>
+                    <div class="pull-right">
+                        <button href="#" class="btn btn-primary">Extract to XLS</button>
+                        <a href="#" class="btn btn-default">Close</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include ../layout/footer.ejs %>
